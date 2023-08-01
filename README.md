@@ -46,11 +46,11 @@ To compile littlepayboarding application, you can use the `javac` command, which
 javac ./src/*.java
 `
 5. **Run the code**: 
-    a. *Without file input*:
+    - *Without file input*:
 ``
 java -cp ./src App
 ``
-    b. *With file input*:
+    - *With file input*:
 ``
 javac ./src/*.java && java -cp ./src App -p 'prices.csv' -i 'taps.csv' -o 'trips.csv'
 ``

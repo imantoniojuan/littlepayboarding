@@ -24,7 +24,7 @@ ON -> ON
 	----> (DIFFERENT STOP) ON -> MISSED(OFF) -> ON [INCOMPLETE]
 OFF -> ON 
 	----> (LAST RECORD) OFF -> ON [INCOMPLETE]
-    ----> OFF -> ON [SKIPPED]
+	----> OFF -> ON [SKIPPED]
 ```
 
 ## Compiling littlepayboarding App

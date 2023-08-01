@@ -162,7 +162,7 @@ class SortTripsByDateTimeUTC implements Comparator<Trips>
     // Used for sorting the order of trips
     public int compare(Trips a, Trips b)
     {    
-        System.out.println(a.toString() + "\t" + b.toString());
+        // System.out.println(a.toString() + "\t" + b.toString());
         if(a.getStartedTimeUTC() != null && b.getStartedTimeUTC() != null){
             return a.getStartedTimeUTC().compareTo(b.getStartedTimeUTC());
         }

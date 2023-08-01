@@ -27,6 +27,9 @@ OFF -> ON
 	----> OFF -> ON [SKIPPED]
 ```
 
+## Prices File
+This file contains a table mapping a starting stop to a ending stop with a price. This table allows us to have more stops as well as have a variable pricing for return stops i.e. A->B != B->A
+
 ## Compiling littlepayboarding App
 
 To compile littlepayboarding application, you can use the `javac` command, which is the Java compiler provided by the Java Development Kit (JDK). Here's a step-by-step guide:

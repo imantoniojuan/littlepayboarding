@@ -58,7 +58,11 @@ public class App {
         this.trips = new ArrayList<Trips>();
     }
 
+    /**
+    * Process all taps to generate a list of trips
+    */
     public void processTaps(){
+        // Create a hashmap to group all taps by PAN
         Map<String,List<Taps>> panToTapsMap = new HashMap<String,List<Taps>>();
         for(Taps tap:taps){
             List<Taps> tapsList = panToTapsMap.get(tap.getPan());
@@ -68,7 +72,8 @@ public class App {
             Collections.sort(tapsList, new SortTapsByDateTimeUTC());
             panToTapsMap.put(tap.getPan(), tapsList);
         }
-        // System.out.println(panToTapsMap);
+
+        // Loop through the hashmap by going through each PAN
         for(String pan:panToTapsMap.keySet()){
             System.out.println("Processing PAN: " + pan);
             List<Taps> tapsList = panToTapsMap.get(pan);
@@ -198,6 +203,9 @@ public class App {
         Collections.sort(trips, new SortTripsByDateTimeUTC());
     }
 
+    /**
+    * Write list of trips to a file
+    */
     void outputTapsResultToFile(){
         List<String> results = new ArrayList<String>();
         results.add(Trips.getHeadersCSVString());
